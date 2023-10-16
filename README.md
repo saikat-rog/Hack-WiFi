@@ -84,7 +84,7 @@ sudo airmon-ng start wlan0
 ```
 iwconfig
 ```
-It should be in monitor mode at this stage.
+It should be in monitor mode at this stage. The wlan0 says it's mode.
 ```
 lo        no wireless extensions.
 
@@ -94,5 +94,18 @@ wlan0mon  IEEE 802.11  Mode:Monitor  Frequency:2.457 GHz  Tx-Power=3 dBm
           Retry short limit:7   RTS thr:off   Fragment thr:off
           Power Management:on
 ```
+If you try to check, the wlan0 name is changed to wlan0mon, because we have changed it to monitor mode.  
 
 
+
+## Discover the Access Points:
+```
+sudo airodump-ng wlan0mon
+```
+A whole bunch of wireless networks will be discovered here. From there note the BSSID(Would be found in the BSSID column) and the Channel(Would be found in the CH column) of your targeted wireless network.
+**Display only the targetted access point:**
+```
+sudo airodump-ng wlan0mon -d <BSSID>
+```
+Replace the above <BSSID> with your targetted network's BSSID that you noted before.
+It will show the information of your targetted network and below it shows the connected device with that network. If you see it is empty below that means,  no devices are connected with that network, and in that case, you need to connect a device so that the handshake file can be exchanged with the AP(Access Point) and you get the chance to capture it on it's way.
