@@ -6,21 +6,21 @@ This repo contains every step to hack any Wi-Fi in your surroundings.
    - Using your machine doesn't require any external Wi-Fi adapter if the internal one supports monitor mode.  
 
 **Install aircrack-ng:**  
--Arch:
+Arch:
 ```
 sudo pacman -S aircrack-ng
 ```
--Kali:
+Kali:
 ```
 sudo apt-get update
 sudo apt-get upgrade aircrack-ng
 ```
--Ubuntu/Debian:
+Ubuntu/Debian:
 ```
 sudo apt-get update
 sudo apt-get install aircrack-ng
 ```
--Fedora:
+Fedora:
 ```
 sudo dnf install aircrack-ng
 ```
