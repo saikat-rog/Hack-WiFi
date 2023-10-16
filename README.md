@@ -102,7 +102,7 @@ If you try to check, the wlan0 name is changed to wlan0mon, because we have chan
 ```
 sudo airodump-ng wlan0mon
 ```
-A whole bunch of wireless networks will be discovered here. From there note the BSSID(Would be found in the BSSID column) and the Channel(Would be found in the CH column) of your targeted wireless network. After being done with noting down that information, stop (Ctrl + C) the process. 
+A whole bunch of wireless networks will be discovered here. From there note the BSSID(Would be found in the BSSID column) and the Channel(Would be found in the CH column) of your targeted wireless network. After being done with noting down that information, stop (Ctrl + C) the process.  
 **Display only the targetted access point:**
 ```
 sudo airodump-ng wlan0mon -d <BSSID>
@@ -118,4 +118,14 @@ sudo airodump-ng -w getpass -c <CHANNEL> --bssid <BSSID> wlan0mon
 ```
 Replace <CHANNEL> with the channel for your targetted network and <BSSID> with your BSSID.  
 Here ```getpass``` is going to be the file name of the handshake file we would store.
+Don't stop the process (Follow the next steps instead) and leave it till we send the de-authentication request and get the handshake file.
 
+
+
+## Send the De-Authentication request:
+Open a new console window and input the command there. That means you are instructed not to kill the process of the previous tab. That should be opened because we will get that file on that other window only.  
+Enter the below command in the new tab of the console.
+```
+sudo aireplay-ng deauth 0 -a <BSSID> wlan0mon
+```
+This sends the De-Authentication request to the targetted network which means, that each and every connected device will be disconnected and will try to reconnect with the AP again. This is the time we will capture the handshake file and will store it locally.
