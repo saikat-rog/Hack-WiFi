@@ -143,9 +143,9 @@ If nothing is found named ```getpass-01.cap``` that means the whole process shou
 
 ## Cracking the HandShake file using aircrack-ng:
 Cracking that file needs some wordlists. Few wordlists are available in this repo and anyone from this should be downloaded.  
-List the directory by ```ls``` to make sure both the wordlist and the Handshake file are present there.
+List the directory by ```ls``` to make sure both the wordlist and the Handshake file are present there.  
 **Use the below command to crack the key:**
-```aircrack-ng getpass-01.cap -w <WORDLIST-PATH>```
+```aircrack-ng getpass-01.cap -w <WORDLIST-PATH>```  
 Replace < WORDLIST-PATH > with the path of the wordlist downloaded.
 
 
