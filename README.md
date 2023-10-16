@@ -29,7 +29,7 @@ sudo dnf install aircrack-ng
 ```
 ip addr
 ```
--It shows:
+-Find your LAN adapter name below, here it is wlan0:
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
