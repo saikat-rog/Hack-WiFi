@@ -71,10 +71,10 @@ wlan0     IEEE 802.11  ESSID:"LIBRARY"
           Tx excessive retries:0  Invalid misc:0   Missed beacon:0
 
 ```
-**Checking for any conflicting process to kill them**  
+**Checking for any conflicting process to kill them**
 ```
 sudo airmon-ng check kill
-```
+```  
 
 **Changing the LAN to monitor mode:**
 ```
