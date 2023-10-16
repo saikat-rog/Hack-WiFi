@@ -5,7 +5,7 @@ This repo contains every step to hack any Wi-Fi in your surroundings.
    - Using VM requires an external Wi-Fi network adapter that should support monitor mode. (Recommended: Alfa network adapter)
    - Using your machine doesn't require any external Wi-Fi adapter if the internal one supports monitor mode.  
 
-##Install aircrack-ng:  
+## Install aircrack-ng:  
 Arch:
 ```
 sudo pacman -S aircrack-ng
