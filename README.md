@@ -11,7 +11,7 @@ Arch:
 sudo pacman -S aircrack-ng
 ```
 Kali:
-```
+```Managed
 sudo apt-get update
 sudo apt-get upgrade aircrack-ng
 ```
@@ -90,13 +90,9 @@ lo        no wireless extensions.
 
 enp2s0    no wireless extensions.
 
-wlan0     IEEE 802.11  ESSID:"LIBRARY"  
-          Mode:Monitor Frequency:5.2 GHz  Access Point: A4:2A:95:2C:33:44   
-          Bit Rate=585 Mb/s   Tx-Power=3 dBm   
+wlan0mon  IEEE 802.11  Mode:Monitor  Frequency:2.457 GHz  Tx-Power=3 dBm   
           Retry short limit:7   RTS thr:off   Fragment thr:off
           Power Management:on
-          Link Quality=63/70  Signal level=-47 dBm  
-          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
-          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
-
 ```
+
+
