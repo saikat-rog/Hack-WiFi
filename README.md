@@ -72,7 +72,10 @@ wlan0     IEEE 802.11  ESSID:"LIBRARY"
 
 ```
 **Checking for any conflicting process to kill them**  
-```sudo airmon-ng check kill```
+```
+sudo airmon-ng check kill
+```
+
 **Changing the LAN to monitor mode:**
 ```
 sudo airmon-ng start wlan0
