@@ -25,11 +25,12 @@ Fedora:
 sudo dnf install aircrack-ng
 ```
 
-**Check your wireless LAN adapter name:**
+## Check your wireless LAN adapter name:
 ```
 ip addr
 ```
--Find your LAN adapter name below, here it is wlan0:
+**Find your LAN adapter name below:**
+Here it is wlan0.
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
