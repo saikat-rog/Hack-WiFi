@@ -25,6 +25,7 @@ Fedora:
 sudo dnf install aircrack-ng
 ```
 
+
 ## Check your wireless LAN adapter name:
 ```
 ip addr
