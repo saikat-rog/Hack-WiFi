@@ -30,7 +30,7 @@ sudo dnf install aircrack-ng
 ```
 ip addr
 ```
-**Find your LAN adapter name below:**
+**Find your LAN adapter name below:**  
 Here it is wlan0.
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
@@ -48,3 +48,28 @@ Here it is wlan0.
     inet6 fe80::a3f5:fa53:55c:b0e7/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 ```
+
+
+## Change your adapter from managed mode to monitor mode
+**Check it's mode:**
+```
+iwconfig
+```
+It should be in managed mode at its initial stage. The wlan0 says it's mode.
+```
+lo        no wireless extensions.
+
+enp2s0    no wireless extensions.
+
+wlan0     IEEE 802.11  ESSID:"LIBRARY"  
+          Mode:Managed  Frequency:5.2 GHz  Access Point: A4:2A:95:2C:33:44   
+          Bit Rate=585 Mb/s   Tx-Power=3 dBm   
+          Retry short limit:7   RTS thr:off   Fragment thr:off
+          Power Management:on
+          Link Quality=63/70  Signal level=-47 dBm  
+          Rx invalid nwid:0  Rx invalid crypt:0  Rx invalid frag:0
+          Tx excessive retries:0  Invalid misc:0   Missed beacon:0
+
+```
+**Checking for any conflicting process to kill them**
+```sudo airmon-ng check kill```
