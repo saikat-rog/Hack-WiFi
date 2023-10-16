@@ -116,7 +116,7 @@ It will show the information of your targetted network and below it shows the co
 ```
 sudo airodump-ng -w getpass -c <CHANNEL> --bssid <BSSID> wlan0mon
 ```
-Replace <CHANNEL> with the channel for your targeted network and <BSSID> with your BSSID.  
+Replace < CHANNEL > with the channel for your targeted network and <BSSID> with your BSSID.  
 Here ```getpass``` is going to be the file name of the handshake file we would store.
 Don't stop the process (Follow the next steps instead) and leave it till we send the de-authentication request and get the handshake file.
 
