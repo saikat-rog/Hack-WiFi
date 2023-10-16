@@ -71,7 +71,7 @@ wlan0     IEEE 802.11  ESSID:"LIBRARY"
           Tx excessive retries:0  Invalid misc:0   Missed beacon:0
 
 ```
-**Checking for any conflicting process to kill them**
+**Checking for any conflicting process to kill them:**
 ```
 sudo airmon-ng check kill
 ```  
@@ -102,10 +102,20 @@ If you try to check, the wlan0 name is changed to wlan0mon, because we have chan
 ```
 sudo airodump-ng wlan0mon
 ```
-A whole bunch of wireless networks will be discovered here. From there note the BSSID(Would be found in the BSSID column) and the Channel(Would be found in the CH column) of your targeted wireless network.
+A whole bunch of wireless networks will be discovered here. From there note the BSSID(Would be found in the BSSID column) and the Channel(Would be found in the CH column) of your targeted wireless network. After being done with noting down that information, stop (Ctrl + C) the process. 
 **Display only the targetted access point:**
 ```
 sudo airodump-ng wlan0mon -d <BSSID>
 ```
 Replace the above <BSSID> with your targetted network's BSSID that you noted before.
-It will show the information of your targetted network and below it shows the connected device with that network. If you see it is empty below that means,  no devices are connected with that network, and in that case, you need to connect a device so that the handshake file can be exchanged with the AP(Access Point) and you get the chance to capture it on it's way.
+It will show the information of your targetted network and below it shows the connected device with that network. If you see it is empty below that means,  no devices are connected with that network, and in that case, you need to connect a device so that the handshake file can be exchanged with the AP(Access Point) and you get the chance to capture it on it's way. When you see any connected device below, stop (Ctrl + C) the process.
+
+
+
+## Storing the captured HandShake file to the local:
+```
+sudo airodump-ng -w getpass -c <CHANNEL> --bssid <BSSID> wlan0mon
+```
+Replace <CHANNEL> with the channel for your targetted network and <BSSID> with your BSSID.  
+Here ```getpass``` is going to be the file name of the handshake file we would store.
+
