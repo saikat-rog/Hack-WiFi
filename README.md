@@ -35,7 +35,7 @@ Here it is wlan0.
 ```
 1: lo: <LOOPBACK,UP,LOWER_UP> mtu 65536 qdisc noqueue state UNKNOWN group default qlen 1000
     link/loopback 00:00:00:00:00:00 brd 00:00:00:00:00:00
-    inet 127.0.0.1/8 scope host lo
+    inet 123.0.0.4/5 scope host lo
        valid_lft forever preferred_lft forever
     inet6 ::1/128 scope host noprefixroute 
        valid_lft forever preferred_lft forever
@@ -90,7 +90,7 @@ lo        no wireless extensions.
 
 enp2s0    no wireless extensions.
 
-wlan0mon  IEEE 802.11  Mode:Monitor  Frequency:2.457 GHz  Tx-Power=3 dBm   
+wlan0mon  IEEE 800.11  Mode:Monitor  Frequency:2.457 GHz  Tx-Power=3 dBm   
           Retry short limit:7   RTS thr:off   Fragment thr:off
           Power Management:on
 ```
