@@ -1,3 +1,6 @@
-# collect_handshake_file
-This repository describes how to collect any handshake file of an access point, that contains the password for that access point.
-#include<stdio.h>
+# Hack Wi-Fi
+This repo contains every step to hack any Wi-Fi in your surroundings.
+There are some basic requirements:
+1) Having a Linux distro booted in your machine or in a Virtual Machine.
+   
+
