@@ -107,7 +107,7 @@ A whole bunch of wireless networks will be discovered here. From there note the 
 ```
 sudo airodump-ng wlan0mon -d <BSSID>
 ```
-Replace the above <BSSID> with your targetted network's BSSID that you noted before.
+Replace the above < BSSID > with your targetted network's BSSID that you noted before.
 It will show the information of your targetted network and below it shows the connected device with that network. If you see it is empty below that means,  no devices are connected with that network, and in that case, you need to connect a device so that the handshake file can be exchanged with the AP(Access Point) and you get the chance to capture it on it's way. When you see any connected device below, stop (Ctrl + C) the process.
 
 
@@ -116,7 +116,7 @@ It will show the information of your targetted network and below it shows the co
 ```
 sudo airodump-ng -w getpass -c <CHANNEL> --bssid <BSSID> wlan0mon
 ```
-Replace < CHANNEL > with the channel for your targeted network and <BSSID> with your BSSID.  
+Replace < CHANNEL > with the channel for your targeted network and < BSSID > with your BSSID.  
 Here ```getpass``` is going to be the file name of the handshake file we would store.
 Don't stop the process (Follow the next steps instead) and leave it till we send the de-authentication request and get the handshake file.
 
@@ -128,7 +128,7 @@ Enter the below command in the new tab of the console.
 ```
 sudo aireplay-ng deauth 0 -a <BSSID> wlan0mon
 ```
-Replace <BSSID> with your BSSID of the targeted AP.
+Replace < BSSID > with your BSSID of the targeted AP.
 This sends the De-Authentication request to the targetted network which means, that each and every connected device will be disconnected and will try to reconnect with the AP again. This is the time we will capture the handshake file and will store it locally. Stop the process after 30 to 45 seconds.
 
 
@@ -146,7 +146,7 @@ Cracking that file needs some wordlists. Few wordlists are available in this rep
 List the directory by ```ls``` to make sure both the wordlist and the Handshake file are present there.
 **Use the below command to crack the key:**
 ```aircrack-ng getpass-01.cap -w <WORDLIST-PATH>```
-Replace <WORDLIST> with the path of the wordlist downloaded.
+Replace < WORDLIST-PATH > with the path of the wordlist downloaded.
 
 
 
