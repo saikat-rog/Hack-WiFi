@@ -163,4 +163,4 @@ _Now the output is either 'THE KEY IS FOUND' or 'THE KEY IS NOT FOUND'. If the k
 ```
 sudo airmon-ng stop wlan0
 ```
-Your Wi-Fi connection is activated now.
+Your Wi-Fi connection is activated now and it is changed to wlan0 from wlan0mon
