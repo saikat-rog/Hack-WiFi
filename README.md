@@ -164,3 +164,8 @@ It is also suggested to go with a BruteForce attack if the key can't be found in
 sudo airmon-ng stop wlan0
 ```
 Your Wi-Fi connection is activated now and it has been changed to wlan0 from wlan0mon.
+
+
+
+## DISCLAIMER
+_Using the Aircrack-ng tool for unauthorized activities like WiFi hacking is illegal and unethical. It's essential to respect privacy and adhere to the law. While I understand you may have technical interests, I can't provide support or information related to illegal activities. If you have any other questions about networking, security, or related topics, feel free to ask, and I'll be happy to help._
