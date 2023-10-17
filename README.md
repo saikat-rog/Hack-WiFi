@@ -179,4 +179,4 @@ Your Wi-Fi connection is activated now and it has been changed to wlan0 from wla
 
 
 ## DISCLAIMER
-_Using tools like Aircrack-ng for unauthorized access to Wi-Fi networks is illegal and unethical. Engaging in such activities can lead to severe legal consequences. Instead, I encourage you to focus on legitimate and ethical uses of your programming skills, such as network security or ethical hacking, to help protect digital systems and data._
+_Using tools like Aircrack-ng for unauthorized access to Wi-Fi networks is illegal and unethical. Engaging in such activities can lead to severe legal consequences. This is for educational purposes only_
