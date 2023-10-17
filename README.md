@@ -103,6 +103,7 @@ If you try to check, the wlan0 name is changed to wlan0mon, because we have chan
 sudo airodump-ng wlan0mon
 ```
 A whole bunch of wireless networks will be discovered here. From there note the BSSID(Would be found in the BSSID column) and the Channel(Would be found in the CH column) of your targeted wireless network. After being done with noting down that information, stop (Ctrl + C) the process.  
+
 **Display only the targetted access point:**
 ```
 sudo airodump-ng wlan0mon -d <BSSID>
