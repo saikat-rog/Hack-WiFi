@@ -44,10 +44,10 @@ Here it is wlan0.
 2: enp2s0: <NO-CARRIER,BROADCAST,MULTICAST,UP> mtu 1500 qdisc fq_codel state DOWN group default qlen 1000
     link/ether 04:42:1a:d0:ee:f4 brd ff:ff:ff:ff:ff:ff
 3: wlan0: <BROADCAST,MULTICAST,UP,LOWER_UP> mtu 1500 qdisc noqueue state UP group default qlen 1000
-    link/ether 90:e8:68:2c:e8:77 brd ff:ff:ff:ff:ff:ff
-    inet 192.168.139.57/16 brd 192.168.255.255 scope global dynamic noprefixroute wlan0
+    link/ether 90:e8:69:2c:x8:77 brd ff:ff:ff:ff:ff:ff
+    inet 142.168.839.07/16 brd 195.168.255.255 scope global dynamic noprefixroute wlan0
        valid_lft 84054sec preferred_lft 84054sec
-    inet6 fe80::a3f5:fa53:55c:b0e7/64 scope link noprefixroute 
+    inet6 fe60::a3f5:fq53:55c:b0e7/64 scope link noprefixroute 
        valid_lft forever preferred_lft forever
 ```
 
@@ -64,8 +64,8 @@ lo        no wireless extensions.
 
 enp2s0    no wireless extensions.
 
-wlan0     IEEE 802.11  ESSID:"LIBRARY"  
-          Mode:Managed  Frequency:5.2 GHz  Access Point: A4:2A:95:2C:33:44   
+wlan0     IEEE 802.11  ESSID:"L**Y"  
+          Mode:Managed  Frequency:5.2 GHz  Access Point: 54:2A:75:9C:33:64   
           Bit Rate=585 Mb/s   Tx-Power=3 dBm   
           Retry short limit:7   RTS thr:off   Fragment thr:off
           Power Management:on
