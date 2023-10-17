@@ -147,7 +147,7 @@ If nothing is found named ```getpass-01.cap``` that means the whole process shou
 
 
 
-## Cracking the HandShake file using aircrack-ng:
+## Cracking the HandShake file using aircrack-ng (Dictionary Attack):
 Cracking that file needs some wordlists. Few wordlists are available in this repo and anyone from this should be downloaded.  
 List the directory by ```ls``` to make sure both the wordlist and the Handshake file are present there.  
 
@@ -156,11 +156,11 @@ List the directory by ```ls``` to make sure both the wordlist and the Handshake 
 Replace < WORDLIST-PATH > with the path of the wordlist downloaded.  
 
 _Now the output is either 'THE KEY IS FOUND' or 'THE KEY IS NOT FOUND'. If the key couldn't be found in that particular wordlist, try with a few other wordlists available._  
-
+It is also suggested to go with a BruteForce attack if the key can't be found in wordlists.
 
 
 ## Switch to managed mode again from monitor mode:
 ```
 sudo airmon-ng stop wlan0
 ```
-Your Wi-Fi connection is activated now and it is changed to wlan0 from wlan0mon
+Your Wi-Fi connection is activated now and it has been changed to wlan0 from wlan0mon.
